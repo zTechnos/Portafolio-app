@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .navbar {
+            background-color: #000000;
+            color: white;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .navbar a:hover {
+            background-color: #000000;
+            color: black;
+        }
+        .navbar a.active {
+            background-color: #000000;
+            color: white;
+        }
+        .main {
+            padding: 20px;
+        }
+        .header {
+    background-color: #ffffff;
+    padding: 3px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 15px;
+        }
+        .column img {
+            width: 100%;
+            height: auto;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home" class="active">Inicio</a>
+        <a href="#about">Acerca de</a>
+        <a href="#contact">Contacto</a>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>Richard Lezcano </h1>
+        </div>
+        <div class="main">
+            <div class="column" id="home">
+                <h2>Inicio</h2>
+                <p>Richard Lezcano es un desarrollador fullstack con habilidades en Python, CSS, HTML, JavaScript, PHP y C+. Con tres años de experiencia en el desarrollo de aplicaciones web, Richard ha trabajado en proyectos de gran envergadura y ha demostrado habilidades técnicas excepcionales. Ha trabajado en proyectos que involucran la creación de sitios web desde cero, así como en la mejora de sitios web existentes. Richard es un apasionado de la tecnología y siempre está buscando formas de mejorar sus habilidades y conocimientos.
+
+                    Además de sus habilidades técnicas, Richard también posee habilidades blandas excepcionales. Es un comunicador efectivo y un solucionador de problemas creativo. También es un colaborador de equipo excepcional y siempre está dispuesto a ayudar a sus compañeros de trabajo.
+                    
+                    Si estás buscando un desarrollador fullstack con habilidades técnicas excepcionales y habilidades blandas sobresalientes, Richard Lezcano es la persona adecuada para el trabajo.</p>
+            </div>
+            <div class="column" id="trabajos">
+                <h2>Mis Trabajos</h2>
+                <p>Aquí puedes ver algunos de mis trabajos más recientes.</p>
+                <div class="info">
+                    <img src="Captura de pantalla 2024-01-12 111132.png" alt="Trabajo 1">
+                    <h3>Temptations Studio</h3>
+                    <p> Sitio Web De Venta De Ropa </p>
+                
+        <a href="https://www.temptations.studio/" target="_blank">Ver Web </a>
+        <img src="Captura de pantalla 2024-01-12 111536.png" alt="Trabajo 1">
+                    <h3> Find your college</h3>
+                    <p> Sitio Web Para Encontrar Universidades </p>
+                    <a href="https://i.imgur.com/4cKVra3.png" target="_blank">Ver Web </a>
+                </div>
+
+            </div>
+          
+            <div class="column" id="contact">
+                <h2>Contacto</h2>
+                <p>Si tienes alguna pregunta o deseas ponerte en contacto conmigo, por favor llena el siguiente formulario.</p>
+                <form action="">
+                    <label for="fname">Nombre:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="text" id="email" name="email"><br>
+                    <label for="message">Mensaje:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Obtener los valores de los campos del formulario
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Enviar los datos a un servidor o almacenarlos localmente
+    console.log(`Nombre: ${name}\nCorreo electrónico: ${email}\nMensaje: ${message}`);
+
+    // Limpiar los campos del formulario
+    document.getElementById('contact-form').reset();
+});
+    </script>
+</body>
+</html>
